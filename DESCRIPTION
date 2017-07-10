@@ -24,6 +24,6 @@ Author:
     Levi Waldron
 Maintainer: Marcel Ramos <marcel.ramosperez@roswellpark.org>
 VignetteBuilder: knitr
-License: CC BY-SA 4.0
+License: file LICENSE
 LazyData: true
 RoxygenNote: 6.0.1
