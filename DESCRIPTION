@@ -1,0 +1,29 @@
+Package: MultiAssayExperimentWorkshop
+Title: A workshop on the MultiAssayExperiment data class and methods.
+Description: This workshop covers basic usage of MultiAssayExperiment for 
+    representation and analysis of multi-omics data. 
+Version: 0.1.0
+Depends:
+    Biobase (>= 2.37),
+    MultiAssayExperiment,
+    S4Vectors,
+    survival,
+    survminer,
+    SummarizedExperiment,
+    AnnotationFilter,
+    EnsDb.Hsapiens.v86
+Suggests:
+    knitr,
+    rmarkdown,
+    RaggedExperiment,
+    shiny,
+    DT,
+    limma
+Author:
+    Marcel Ramos,
+    Levi Waldron
+Maintainer: Marcel Ramos <marcel.ramosperez@roswellpark.org>
+VignetteBuilder: knitr
+License: CC BY-SA 4.0
+LazyData: true
+RoxygenNote: 6.0.1
