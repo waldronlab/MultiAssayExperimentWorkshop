@@ -5,9 +5,14 @@
 #'
 #' @return NULL
 #' @export maeView
-#'
+#' @importFrom graphics boxplot plot
+#' @importFrom stats model.matrix
+#' @import Biobase
+#' @import MultiAssayExperiment
 #' @examples
-#' maeView(miniACC)
+#' \dontrun{
+#'  maeView(miniACC)
+#' }
 maeView = function(mae) {
 #
 # this function initiates a shiny app for viewing relationships

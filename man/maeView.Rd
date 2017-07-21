@@ -13,5 +13,7 @@ maeView(mae)
 Title MultiAssayExperiment viewer
 }
 \examples{
-maeView(miniACC)
+\dontrun{
+ maeView(miniACC)
+}
 }

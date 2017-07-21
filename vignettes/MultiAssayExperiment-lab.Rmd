@@ -1,5 +1,9 @@
 ---
 title: "Bioc2017 MultiAssayExperiment Lab"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Coordinating Analysis of Multi-Assay Experiments}
+  %\VignetteEncoding{UTF-8}
 output:
   BiocStyle::html_document:
     number_sections: no
