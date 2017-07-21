@@ -1,6 +1,5 @@
 ---
-title: "MultiAssayExperiment Lab"
-date: "June 15, 2017"
+title: "Bioc2017 MultiAssayExperiment Lab"
 output:
   BiocStyle::html_document:
     number_sections: no
