@@ -478,10 +478,12 @@ First, make a new object and convert its experiments to SummarizedExperiment obj
 ```{r}
 suppressPackageStartupMessages(library(SummarizedExperiment))
 seACC <- miniACC
-for (i in seq_along(experiments(seACC))){
-  seACC[[i]] <- SummarizedExperiment(seACC[[i]])
-}
-seACC
+experiments(seACC)
+seACC[[1]] <- SummarizedExperiment(exprs(seACC[[1]]))
+seACC[[3]] <- SummarizedExperiment(exprs(seACC[[3]]))
+seACC[[4]] <- SummarizedExperiment(seACC[[4]])
+seACC[[5]] <- SummarizedExperiment(exprs(seACC[[5]]))
+experiments(seACC)
 ```
 
 
