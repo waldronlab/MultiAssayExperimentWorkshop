@@ -2,7 +2,7 @@ Package: MultiAssayExperimentWorkshop
 Title: A workshop on the MultiAssayExperiment data class and methods
 Description: This workshop covers basic usage of MultiAssayExperiment for 
     representation and analysis of multi-omics data. 
-Version: 0.1.0
+Version: 0.1.1
 Depends:
     R (>= 3.4.0),
     MultiAssayExperiment,
