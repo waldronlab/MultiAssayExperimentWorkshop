@@ -10,6 +10,7 @@ Depends:
 Suggests:
     knitr,
     rmarkdown,
+    curatedTCGAData,
     RaggedExperiment,
     shiny,
     DT,

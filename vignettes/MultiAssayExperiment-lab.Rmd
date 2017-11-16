@@ -469,22 +469,9 @@ The highest correlation present is between PC2 of the RNA-seq assay, and PC1 of 
 
 ## Annotating with ranges
 
-Convert all the `ExperimentList` elements in `miniACC`  to `SummarizedExperiment` objects.  Then use `rowRanges` to annotate these objects with genomic ranges. For the microRNA assay, annotate instead with the genomic coordinates of predicted targets.
+Convert all the `ExperimentList` elements in `miniACC`  to `RangedSummarizedExperiment` objects.  Then use `rowRanges` to annotate these objects with genomic ranges. For the microRNA assay, annotate instead with the genomic coordinates of predicted targets.
 
 **Solution**
-
-First, make a new object and convert its experiments to SummarizedExperiment objects:
-
-```{r}
-suppressPackageStartupMessages(library(SummarizedExperiment))
-seACC <- miniACC
-experiments(seACC)
-seACC[[1]] <- SummarizedExperiment(exprs(seACC[[1]]))
-seACC[[3]] <- SummarizedExperiment(exprs(seACC[[3]]))
-seACC[[4]] <- SummarizedExperiment(seACC[[4]])
-seACC[[5]] <- SummarizedExperiment(exprs(seACC[[5]]))
-experiments(seACC)
-```
 
 
 The following shortcut function takes a list of human gene symbols and uses `AnnotationFilter` and `EnsDb.Hsapiens.v86` to look up the ranges, and return these as a GRangesList which can be used to replace the rowRanges of the SummarizedExperiment objects:
@@ -510,25 +497,26 @@ getrr <- function(identifiers, EnsDbFilterFunc="SymbolFilter"){
 
 For example:
 ```{r}
-getrr(rownames(seACC)[[1]])
+getrr(rownames(miniACC)[[1]])
 ```
 
 Use this to set the rowRanges of experiments 1-4 with these GRangesList objects
 ```{r}
+rseACC <- miniACC
 for (i in 1:4){
-  rowRanges(seACC[[i]]) <- getrr(rownames(seACC[[i]]))
+  rowRanges(rseACC[[i]]) <- getrr(rownames(rseACC[[i]]))
 }
 ```
 
 Note that the class of experiments 1-4 is now `RangedSummarizedExperiment`:
 ```{r}
-experiments(seACC)
+experiments(rseACC)
 ```
 
 With ranged objects in the MultiAssayExperiment, you can then do subsetting by ranges. For example, select all genes on chromosome 1 for the four 
 *rangedSummarizedExperiment* objects:
 ```{r}
-seACC[GRanges(seqnames="1:1-1e9"), , 1:4]
+rseACC[GRanges(seqnames="1:1-1e9"), , 1:4]
 ```
 
 *Note about microRNA*: You can set ranges for the microRNA assay according to the genomic location of those microRNA, or the locations of their predicted targets, but we don't do it here. Assigning genomic ranges of microRNA targets would be an easy way to subset them according to their targets.
