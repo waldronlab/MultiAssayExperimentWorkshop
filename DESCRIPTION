@@ -20,6 +20,8 @@ Suggests:
     SummarizedExperiment,
     AnnotationFilter,
     EnsDb.Hsapiens.v86,
+    UpSetR,
+    bookdown,
     R.rsp
 Author:
     Marcel Ramos,
