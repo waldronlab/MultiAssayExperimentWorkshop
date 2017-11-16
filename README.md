@@ -9,10 +9,10 @@ The MultiAssayExperiment software package provides for the coordinated represent
 
 To install the workshop dependencies on your own RStudio desktop (may not actually install dependencies):
 
-> BiocInstaller::biocLite("waldronlab/MultiAssayExperimentWorkshop",dependencies=TRUE, build_vignettes=TRUE)
+    > BiocInstaller::biocLite("waldronlab/MultiAssayExperimentWorkshop",dependencies=TRUE, build_vignettes=TRUE)
 
 Customized MultiAssayExperiment objects built for The Cancer Genome Atlas:
 
-> library(curatedTCGAData)
+    > library(curatedTCGAData)
 
-Here are associated [slides](https://github.com/waldronlab/MultiAssayExperiment/blob/master/MultiAssayExperimentWorkshop_slides.pptx?raw=true) presented at the start of this workshop.
+Here are associated [slides](https://github.com/waldronlab/MultiAssayExperimentWorkshop/blob/master/MultiAssayExperimentWorkshop_slides.pptx?raw=true) presented at the start of this workshop.
