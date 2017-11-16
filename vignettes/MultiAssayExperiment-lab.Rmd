@@ -15,6 +15,12 @@ output:
 knitr::opts_chunk$set(cache = TRUE)
 ```
 
+# Creating your own MultiAssayExperiment
+
+Most of this vignette makes use of the pre-built `miniACC` object provided with the MultiAssayExperiment package. To start from scratch building your own MultiAssayExperiment, see the package [Coordinating Analysis of Multi-Assay Experiments vignette](https://bioconductor.org/packages/release/bioc/vignettes/MultiAssayExperiment/inst/doc/MultiAssayExperiment.html). The package [cheat sheet](https://bioconductor.org/packages/release/bioc/vignettes/MultiAssayExperiment/inst/doc/MultiAssayExperiment_cheatsheet.pdf) is also helpful. If anything is unclear, please ask a question at https://support.bioconductor.org/ or create an issue on the [MultiAssayExperiment issue tracker](https://github.com/waldronlab/MultiAssayExperiment/issues).
+
+# Looking at the miniACC object
+
 Get started by trying out `MultiAssayExperiment` using a subset of the TCGA adrenocortical carcinoma (ACC) dataset provided with the package. This dataset provides five assays on 92 patients, although all five assays were not performed for every patient:
 
 1. **RNASeq2GeneNorm**: gene mRNA abundance by RNA-seq
