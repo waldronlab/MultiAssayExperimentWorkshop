@@ -2,27 +2,27 @@ Package: MultiAssayExperimentWorkshop
 Title: A workshop on the MultiAssayExperiment data class and methods
 Description: This workshop covers basic usage of MultiAssayExperiment for 
     representation and analysis of multi-omics data. 
-Version: 0.1.2
+Version: 0.2.0
 Depends:
-    R (>= 3.4.0),
+    R (>= 3.5.0),
     MultiAssayExperiment,
-    Biobase (>= 2.37)
+    S4Vectors,
+    Biobase (>= 2.40)
+Imports:
+    GenomicRanges,
+    SummarizedExperiment
+    RaggedExperiment,
+    curatedTCGAData,
+    TCGAutils,
+    UpSetR,
+    AnnotationFilter,
+    EnsDb.Hsapiens.v86,
+    survival,
+    survminer,
+    pheatmap
 Suggests:
     knitr,
     rmarkdown,
-    curatedTCGAData,
-    RaggedExperiment,
-    shiny,
-    DT,
-    limma,
-    S4Vectors,
-    survival,
-    survminer,
-    SummarizedExperiment,
-    AnnotationFilter,
-    EnsDb.Hsapiens.v86,
-    UpSetR,
-    bookdown,
     R.rsp
 Author:
     Marcel Ramos,
@@ -31,4 +31,4 @@ Maintainer: Marcel Ramos <marcel.ramosperez@roswellpark.org>
 VignetteBuilder: knitr, R.rsp
 License: file LICENSE
 LazyData: true
-RoxygenNote: 6.0.1
+
