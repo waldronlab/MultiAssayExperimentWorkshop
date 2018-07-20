@@ -13,4 +13,3 @@ To install the workshop dependencies on your own RStudio desktop (the first line
 BiocInstaller::biocLite(c("curatedTCGAData", "mirbase.db", "EnsDb.Hsapiens.v86"))
 BiocInstaller::biocLite("waldronlab/MultiAssayExperimentWorkshop")
 ```
-

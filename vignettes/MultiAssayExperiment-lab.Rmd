@@ -3,8 +3,8 @@ title: "Workflow for multi-omics analysis with MultiAssayExperiment"
 author: "Marcel Ramos and Levi Waldron"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 vignette: >
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Analysis and Resources of Multi-Assay Experiments}
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 output:
   BiocStyle::html_document:
@@ -13,7 +13,12 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache=TRUE)
+knitr::opts_chunk$set(
+  echo = TRUE,
+  cache = TRUE,
+  collapse = TRUE,
+  comment = "#>"
+)
 ```
 
 
@@ -31,7 +36,7 @@ the `RaggedExperiment` data class, which provides efficient and powerful
 operations for representation of copy number and mutation and variant
 data that are represented by different genomic ranges for each specimen.
 
-There is a built version of this workshop available at http://rpubs.com/lwaldron/MAEWorkshop
+There is a built version of this workshop available at http://rpubs.com/lwaldron/MAEWorkshop. The source is available at https://github.com/waldronlab/MultiAssayExperimentWorkshop.
 
 ## Pre-requisites
 
@@ -46,6 +51,13 @@ from scratch, and will also work with more complex objects provided
 by the `curatedTCGAData` package.
 
 ## R/Bioconductor packages used
+
+To install the workshop dependencies, assuming you have already installed Bioconductor (www.bioconductor.org/install):
+```
+BiocInstaller::biocLite(c("curatedTCGAData", "mirbase.db", "EnsDb.Hsapiens.v86"))
+BiocInstaller::biocLite("waldronlab/MultiAssayExperimentWorkshop")
+```
+Note, the first line installs experimental data packages not installed automatically by biocLite.
 
 * [MultiAssayExperiment](https://bioconductor.org/packages/MultiAssayExperiment)
 * [GenomicRanges](https://bioconductor.org/packages/GenomicRanges)

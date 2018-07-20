@@ -33,4 +33,3 @@ Maintainer: Marcel Ramos <marcel.ramosperez@roswellpark.org>
 VignetteBuilder: knitr, R.rsp
 License: file LICENSE
 LazyData: true
-
