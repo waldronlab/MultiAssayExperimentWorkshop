@@ -10,7 +10,8 @@ Depends:
     Biobase (>= 2.40)
 Imports:
     GenomicRanges,
-    SummarizedExperiment
+    SummarizedExperiment,
+    SingleCellExperiment,
     RaggedExperiment,
     curatedTCGAData,
     TCGAutils,
@@ -19,6 +20,7 @@ Imports:
     EnsDb.Hsapiens.v86,
     survival,
     survminer,
+    mirbase.db,
     pheatmap
 Suggests:
     knitr,

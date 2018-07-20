@@ -31,9 +31,9 @@ the `RaggedExperiment` data class, which provides efficient and powerful
 operations for representation of copy number and mutation and variant
 data that are represented by different genomic ranges for each specimen.
 
-## Pre-requisites
+There is a built version of this workshop available at http://rpubs.com/lwaldron/MAEWorkshop
 
-List any workshop prerequisites, for example:
+## Pre-requisites
 
 * Basic knowledge of R syntax
 * Familiarity with the GRanges and SummarizedExperiment classes
@@ -130,8 +130,7 @@ machine learning, and plotting
 
 # Overview of key data classes
 
-This section summarizes three fundamental data classes for the representation of multi-omics
-experiments. 
+This section summarizes three fundamental data classes for the representation of multi-omics experiments. 
 
 ## `(Ranged)SummarizedExperiment`
 
