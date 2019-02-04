@@ -10,6 +10,6 @@ The MultiAssayExperiment software package provides for the coordinated represent
 To install the workshop dependencies on your own RStudio desktop (the first line installs experimental data packages not installed automatically by biocLite):
 
 ```
-BiocInstaller::biocLite(c("curatedTCGAData", "mirbase.db", "EnsDb.Hsapiens.v86"))
-BiocInstaller::biocLite("waldronlab/MultiAssayExperimentWorkshop")
+BiocManager::install(c("curatedTCGAData", "mirbase.db", "EnsDb.Hsapiens.v86"))
+BiocManager::install("waldronlab/MultiAssayExperimentWorkshop")
 ```
