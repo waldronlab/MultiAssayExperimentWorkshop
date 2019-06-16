@@ -1,3 +1,7 @@
+# Archived
+
+This workshop is now moved to www.github.com/waldronlab/MultiAssayWorkshop
+
 # Multi-omics data representation and analysis with MultiAssayExperiment
 
 July 20, 2018
